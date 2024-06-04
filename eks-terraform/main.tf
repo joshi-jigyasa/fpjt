@@ -136,7 +136,7 @@ data "aws_security_group" "selected" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name = "tag:Name"
-    values = ["devops-project-veera"]
+    values = ["terraform-20240603094614477200000002"]
  }
 }
 
