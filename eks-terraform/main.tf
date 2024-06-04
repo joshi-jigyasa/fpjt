@@ -113,7 +113,7 @@ provider "aws" {
  # data source 
  data "aws_vpc" "main" {
   tags = {
-    Name = "Jumphost-vpc"  # Specify the name of your existing VPC
+    Name = "my-vpc"  # Specify the name of your existing VPC
   }
 }
 
@@ -136,7 +136,7 @@ data "aws_security_group" "selected" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name = "tag:Name"
-    values = ["terraform-20240603094614477200000002"]
+    values = ["jumphost-sg"]
  }
 }
 
